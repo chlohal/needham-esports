@@ -1,0 +1,437 @@
+.visually-hidden {
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+ }
+ 
+ * {
+    box-sizing: border-box;
+ }
+ 
+ body {
+    margin: 0;
+    padding: 0;
+    background: #fefefe;
+    color: #0E0F19;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ section {
+    position: relative;
+ }
+ 
+ a:link, a:visited {
+     color: #05299E;
+     text-decoration: none;
+ }
+#hero {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/assets/image/nyt--esports-College1-master1050-v2.jpg");
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero .hero--text {
+    display: inline-block;
+    font-size: 2.5rem;
+    width: max-content;
+    max-width: 100vw;
+    text-align: center;
+    z-index: 1;
+    color: #fefefe;
+}
+
+#hero .hero--lightbox {
+    position: absolute;
+    background: #000a;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+header {
+    font-size: 2rem;
+    position: fixed;
+    top: 0;
+    height: 4rem;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    background: #fefefe;
+    color: #0E0F19;
+    padding: 0 0.5em;
+    z-index: 99;
+    box-shadow: 0 0 0.5em 0 #0E0F19;
+}
+
+header.trans {
+    background: 0;
+    color: #fefefe;
+}
+
+nav {
+    margin-left: auto;
+    height: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0.5em;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    background: inherit;
+    height: 4rem;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+header a:link, header a:visited, header button {
+    color: inherit;
+    background: 0;
+    padding: 0em;
+    margin: 0.25em;
+    border: 0;
+    text-decoration: none;
+    font: inherit;
+    
+    text-transform: uppercase;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    letter-spacing: -0.1ch;
+    
+    cursor: pointer;
+}
+
+header svg {
+    width: 1em;
+    height: 1em;
+}  
+
+header.mobile.open {
+    background: #fefefe;
+    color: #0E0F19;
+}
+
+header path {
+    stroke: #0000;
+    transform-origin: center;
+}
+
+
+header.mobile nav {
+    height: 0;
+    position: absolute;
+    top: 4rem;
+    overflow: hidden;
+    width: 100vw;
+    left: 0;
+    text-align: right;
+    right: 0;
+}
+
+#open-menu {
+    display: none;
+}
+
+header.mobile #open-menu {
+    display: block;
+    margin-left: auto;
+}
+
+header svg {
+    fill: #0E0F19;
+}
+
+header.trans svg {
+    fill: #fefefe;
+}
+
+header.open svg {
+    fill: #0E0F19;
+}
+
+header.mobile.open nav {
+    height: max-content;
+    background: #f1f1f1;
+}
+
+header.mobile.open li {
+    display: block;
+    width: 100%
+}
+
+header.mobile nav svg {
+    display: none;
+}
+
+header.mobile nav .visually-hidden {
+    clip-path: none;
+    clip: none;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: auto;
+}
+
+header.mobile.open ul {
+    flex-direction: column;
+    width: 100%;
+}
+
+header.mobile nav ul {
+    height: max-content;
+}
+.news--load-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fefefead;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#news h2, #news h3 {
+    font-family: 'Bungee', sans-serif;
+}
+
+#news {
+    max-width: 100%;
+    font-size: 1.25rem;
+    width: 150ch;
+    margin: auto;
+    padding: 0 0.5em;
+}
+ul.text-vert-swap {
+    display: inline-block;
+    height: 3ex;
+    margin: 0;
+    padding: 0;
+    color: #05afe7;
+    text-align: center;
+    position: relative;
+    vertical-align: bottom;
+    width: max-content;
+    max-width: 100vw;
+    font-family: 'Bungee', sans-serif;
+    overflow: hidden;
+}
+
+.text-vert-swap--sibling {
+    display: inline-block;
+    height: 3ex;
+    line-height: 1;
+    vertical-align: bottom;
+    font-family: 'Bungee', sans-serif;
+}
+
+ul.text-vert-swap li {
+    height: 100%;
+    white-space: nowrap;
+    list-style-type: none;
+    top: 0;
+    line-height: 1;
+    vertical-align: bottom;
+    text-align: center;
+    width: 100%;
+}
+section {
+    overflow: hidden;    
+}
+
+ol#upcoming-events {
+    padding: 1em;
+    margin: 0;
+    width: 100%;
+    overflow-x: auto;
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+ol#upcoming-events > li {
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    height: 30em;
+    flex-shrink: 0;
+    width: 20em;
+    border-radius: 0.75em;
+    overflow: hidden;
+    background-color: #f0efef;
+    padding: 1em;
+    padding-top: 14em;
+}
+
+.upcoming-events--see-all {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Bungee';
+}
+
+.upcoming-events--see-all a::after {
+    content: "\01F862";
+    margin-left: 0.5em;
+    transition: transform 0.2s;
+    font-weight: bold;
+    transform: translateX(0);
+    display: inline-block;
+}
+
+.upcoming-events--see-all a:hover::after {
+    transform: translateX(1em);
+}
+
+ol#upcoming-events .shadow {
+    background-color: #c5c4c4;
+    box-shadow: 0 -16em 0 #dfdfdf inset
+}
+
+ol#upcoming-events + .upcoming-events--load-lightbox {
+    display: none;
+}
+
+ol#upcoming-events > li:last-child {
+    margin-right: 1em;
+}
+
+ol#upcoming-events.loading {
+    overflow-x: hidden;
+}
+
+ol#upcoming-events.loading + .upcoming-events--load-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fefefead;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ol#upcoming-events.loading + .upcoming-events--load-lightbox img {
+    width: 5em;
+}
+
+ol#upcoming-events > li > img {
+    position: absolute;
+    height: 13em;
+    bottom: 17em;
+    left: 0;
+}
+
+ol#upcoming-events > li time {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: -0.04ch;
+    color: #8B2635;
+    font-weight: bold;
+    display: block;
+}
+
+ol#upcoming-events > li h3 {
+    margin-top: 0.25em;
+    height: 1em;
+    margin-bottom: 1em;
+}
+
+ol#upcoming-events > li p {
+    margin: 0.2em 0 0 0;
+    height: 3em;
+}
+
+ol#upcoming-events > li ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol#upcoming-events > li ul li {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+ol#upcoming-events ul li h4 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.85em;
+    margin: 0;
+    margin-right: auto;
+}
+
+ol#upcoming-events ul li a {
+    display: inline-block;
+    height: min-content;
+}
+
+ol#upcoming-events ul li img {
+    width: 1.8em;
+    height: 1.8em;
+    margin: 0.1em;
+    border-radius: 5px;
+}
+
+ol#upcoming-events > li p {
+    margin: 0.2em 0 0 0;
+    height: 3em;
+}
+
+ol#upcoming-events > li div.buttons {
+    height: 3em;
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+ol#upcoming-events > li div.buttons button, ol#upcoming-events > li div.buttons .empty-state {
+    flex-grow: 1;
+    font: inherit;
+    font-size: 0.9em;
+    line-height: 1;
+    color: #fefefe;
+    background: #0094C6;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Bungee', sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+ol#upcoming-events > li div.buttons .empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5fabc4;
+    cursor: default;
+}
+
+ol#upcoming-events > li div.buttons button:last-child {
+    background: #87888a;
+}
+
+ol#upcoming-events > li div.buttons button:last-child:first-child {
+    background: #0094C6;
+}

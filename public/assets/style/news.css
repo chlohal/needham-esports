@@ -1,0 +1,29 @@
+.news--load-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fefefead;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#news h2, #news h3 {
+    font-family: 'Bungee', sans-serif;
+}
+
+#news {
+    max-width: 100%;
+    font-size: 1.25rem;
+    width: 150ch;
+    margin: auto;
+    padding: 0 0.5em;
+}
+
+#news article {
+    max-width: 100%;x
+    width: 100ch;
+    
+}

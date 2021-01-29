@@ -1,0 +1,33 @@
+ul.text-vert-swap {
+    display: inline-block;
+    height: 3ex;
+    margin: 0;
+    padding: 0;
+    color: #05afe7;
+    text-align: center;
+    position: relative;
+    vertical-align: bottom;
+    width: max-content;
+    max-width: 100vw;
+    font-family: 'Bungee', sans-serif;
+    overflow: hidden;
+}
+
+.text-vert-swap--sibling {
+    display: inline-block;
+    height: 3ex;
+    line-height: 1;
+    vertical-align: bottom;
+    font-family: 'Bungee', sans-serif;
+}
+
+ul.text-vert-swap li {
+    height: 100%;
+    white-space: nowrap;
+    list-style-type: none;
+    top: 0;
+    line-height: 1;
+    vertical-align: bottom;
+    text-align: center;
+    width: 100%;
+}

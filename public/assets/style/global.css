@@ -1,0 +1,30 @@
+.visually-hidden {
+    clip-path: inset(100%);
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+ }
+ 
+ * {
+    box-sizing: border-box;
+ }
+ 
+ body {
+    margin: 0;
+    padding: 0;
+    background: #fefefe;
+    color: #0E0F19;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ }
+ 
+ section {
+    position: relative;
+ }
+ 
+ a:link, a:visited {
+     color: #05299E;
+     text-decoration: none;
+ }

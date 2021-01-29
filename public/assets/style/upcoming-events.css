@@ -1,0 +1,184 @@
+section {
+    overflow: hidden;    
+}
+
+ol#upcoming-events {
+    padding: 1em;
+    margin: 0;
+    width: 100%;
+    overflow-x: auto;
+    list-style-type: none;
+    display: flex;
+    gap: 1em;
+    position: relative;
+    font-size: 1.25rem;
+}
+
+ol#upcoming-events > li {
+    display: inline-block;
+    position: relative;
+    list-style-type: none;
+    height: 30em;
+    flex-shrink: 0;
+    width: 20em;
+    border-radius: 0.75em;
+    overflow: hidden;
+    background-color: #f0efef;
+    padding: 1em;
+    padding-top: 14em;
+}
+
+.upcoming-events--see-all {
+    text-align: center;
+    font-size: 1.5em;
+    font-family: 'Bungee';
+}
+
+.upcoming-events--see-all a::after {
+    content: "\01F862";
+    margin-left: 0.5em;
+    transition: transform 0.2s;
+    font-weight: bold;
+    transform: translateX(0);
+    display: inline-block;
+}
+
+.upcoming-events--see-all a:hover::after {
+    transform: translateX(1em);
+}
+
+ol#upcoming-events .shadow {
+    background-color: #c5c4c4;
+    box-shadow: 0 -16em 0 #dfdfdf inset
+}
+
+ol#upcoming-events + .upcoming-events--load-lightbox {
+    display: none;
+}
+
+ol#upcoming-events > li:last-child {
+    margin-right: 1em;
+}
+
+ol#upcoming-events.loading {
+    overflow-x: hidden;
+}
+
+ol#upcoming-events.loading + .upcoming-events--load-lightbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fefefead;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ol#upcoming-events.loading + .upcoming-events--load-lightbox img {
+    width: 5em;
+}
+
+ol#upcoming-events > li > img {
+    position: absolute;
+    height: 13em;
+    bottom: 17em;
+    left: 0;
+}
+
+ol#upcoming-events > li time {
+    text-transform: uppercase;
+    font-size: 0.8em;
+    letter-spacing: -0.04ch;
+    color: #8B2635;
+    font-weight: bold;
+    display: block;
+}
+
+ol#upcoming-events > li h3 {
+    margin-top: 0.25em;
+    height: 1em;
+    margin-bottom: 1em;
+}
+
+ol#upcoming-events > li p {
+    margin: 0.2em 0 0 0;
+    height: 3em;
+}
+
+ol#upcoming-events > li ul {
+    margin: 0;
+    padding: 0;
+}
+
+ol#upcoming-events > li ul li {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+}
+
+ol#upcoming-events ul li h4 {
+    text-transform: uppercase;
+    font-weight: lighter;
+    font-size: 0.85em;
+    margin: 0;
+    margin-right: auto;
+}
+
+ol#upcoming-events ul li a {
+    display: inline-block;
+    height: min-content;
+}
+
+ol#upcoming-events ul li img {
+    width: 1.8em;
+    height: 1.8em;
+    margin: 0.1em;
+    border-radius: 5px;
+}
+
+ol#upcoming-events > li p {
+    margin: 0.2em 0 0 0;
+    height: 3em;
+}
+
+ol#upcoming-events > li div.buttons {
+    height: 3em;
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+ol#upcoming-events > li div.buttons button, ol#upcoming-events > li div.buttons .empty-state {
+    flex-grow: 1;
+    font: inherit;
+    font-size: 0.9em;
+    line-height: 1;
+    color: #fefefe;
+    background: #0094C6;
+    border: 0;
+    border-radius: 5px;
+    font-family: 'Bungee', sans-serif;
+    vertical-align: middle;
+    text-align: center;
+    cursor: pointer;
+}
+
+ol#upcoming-events > li div.buttons .empty-state {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5fabc4;
+    cursor: default;
+}
+
+ol#upcoming-events > li div.buttons button:last-child {
+    background: #87888a;
+}
+
+ol#upcoming-events > li div.buttons button:last-child:first-child {
+    background: #0094C6;
+}
